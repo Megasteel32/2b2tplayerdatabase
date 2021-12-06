@@ -1,6 +1,8 @@
 # 2b2t Player Database
 ## Overview
 Sup. I created this database by scraping [2b2t.dev](2b2t.dev) for their player list and last seen data. All credit to that data goes to them, I simply aggregated the data into an easily searchable database. Currently, there are 457,768 players with 238,858 corresponding last seen dates. I do not currently have any join data, that is not public to my knowledge. This data was scraped across 12/5-12/6/2021, therefore it is already out of date by the time you read this. However, it's here, I'll be playing around with this data set and others to see what I can come up with. Any updates will be noted below, for now this is all I've got.
+**TO DOWNLOAD THE DB: [CLICK HERE](https://www.mediafire.com/file/w92le0v5hc2srtl/2b2t.accdb/file)**
+Due to Github limitations (and I can't be arsed to use GLFS) the file is too big to easily host here.
 ## Database Usage
 The database is a .accdb file for Microsoft Access. There are tools/ways out there to convert this to a MySQL, SQLite, or otherwise a different database format/management suite. There are two tables, players and last seen. The **player table** holds username, UUID, joins/leaves, kills/deaths. The **last seen table** should be self explanatory, holding username and last seen data. The tables are linked using username as primary keys. 
 
