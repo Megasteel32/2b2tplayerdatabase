@@ -9,7 +9,6 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from queue import Queue
 from threading import Lock, Thread, Event
 
-from numpy.ma.extras import average
 from tqdm import tqdm
 from datetime import datetime, timedelta
 
