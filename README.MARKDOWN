@@ -10,4 +10,6 @@ If you care about updating specific data there are the individual scripts for th
 however only the update_all.py script will update the lastupdated column of the
 players.db players table.
 
+Oh, and the database(s) are now small enough to fit into the git repo, as you can obviously see.
+
 That's all I got, enjoy. 
