@@ -8,6 +8,8 @@ import queue
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from queue import Queue
 from threading import Lock, Thread, Event
+
+from numpy.ma.extras import average
 from tqdm import tqdm
 from datetime import datetime, timedelta
 
@@ -21,7 +23,7 @@ FIRSTDEATH_DB_PATH = 'firstdeath.db'
 
 def fetch_data(url):
     try:
-        response = requests.get(url, timeout=10)
+        response = requests.get(url, timeout=60)
         if response.status_code == 200:
             return response.json()
     except requests.RequestException as e:
@@ -29,7 +31,7 @@ def fetch_data(url):
     return None
 
 def get_optimal_worker_count():
-    return min(32, (os.cpu_count() or 1) + 4)
+    return os.cpu_count()
 
 def update_main_database():
     conn = sqlite3.connect(MAIN_DB_PATH)
