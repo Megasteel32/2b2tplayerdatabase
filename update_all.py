@@ -30,7 +30,7 @@ def fetch_data(url):
     return None
 
 def get_optimal_worker_count():
-    return os.cpu_count()
+    return (os.cpu_count() * 3) // 4
 
 def update_main_database():
     conn = sqlite3.connect(MAIN_DB_PATH)
